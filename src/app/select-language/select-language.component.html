@@ -1,0 +1,6 @@
+<ul class="languages">
+  <li *ngFor="let language of languages" (click)="updateLanguage(language)"
+    [style.color]="(language === selectedLanguage) ? '#d0021b' : null">
+    {{language}}
+  </li>
+</ul>

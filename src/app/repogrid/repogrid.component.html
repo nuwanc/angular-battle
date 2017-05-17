@@ -1,0 +1,13 @@
+<ul class="popular-list">
+  <li *ngFor="let repo of repos; let i=index;" class='popular-item'>
+    <div className='popular-rank'>#{{i + 1}}</div>
+    <ul className='space-list-item'>
+      <li>
+        <img class='avatar' [src]="repo.owner.avatar_url" [alt]="'Aavatar for '+repo.owner.login" />
+      </li>
+      <li><a [href]="repo.html_url">{{repo.name}}</a></li>
+      <li>@{{repo.owner.login}}</li>
+      <li>{{repo.stargazers_count}} stars</li>
+    </ul>
+  </li>
+</ul>
