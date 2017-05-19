@@ -1,5 +1,5 @@
 <div>
   <select-language [selectedLanguage]="language" (onSelect)="onUpdateLanguage($event)"></select-language>
-  <div *ngIf="!repos">Loading..</div>
+  <div *ngIf="!repos"><loading></loading></div>
   <repo-grid [repos]="repos"></repo-grid>
 </div>

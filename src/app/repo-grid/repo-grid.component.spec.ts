@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RepogridComponent } from './repogrid.component';
+import { RepoGridComponent } from './repo-grid.component';
 
 describe('RepogridComponent', () => {
-  let component: RepogridComponent;
-  let fixture: ComponentFixture<RepogridComponent>;
+  let component: RepoGridComponent;
+  let fixture: ComponentFixture<RepoGridComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RepogridComponent ]
+      declarations: [ RepoGridComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RepogridComponent);
+    fixture = TestBed.createComponent(RepoGridComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

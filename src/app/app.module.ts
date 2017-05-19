@@ -11,7 +11,9 @@ import { PopularComponent } from './popular/popular.component';
 import { HomeComponent } from './home/home.component';
 import { BattleComponent } from './battle/battle.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { RepogridComponent } from './repogrid/repogrid.component';
+import { RepoGridComponent } from './repo-grid/repo-grid.component';
+import { LoadingComponent } from './loading/loading.component';
+import { PlayerInputComponent } from './player-input/player-input.component';
 
 const appRoutes: Routes = [
   {path : 'home' , component : HomeComponent},
@@ -28,7 +30,9 @@ const appRoutes: Routes = [
     HomeComponent,
     BattleComponent,
     NavbarComponent,
-    RepogridComponent
+    RepoGridComponent,
+    LoadingComponent,
+    PlayerInputComponent
   ],
   imports: [
     BrowserModule,
