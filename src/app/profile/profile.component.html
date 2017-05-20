@@ -1,0 +1,11 @@
+<player-preview [username]="info.login" [avatar]="info.avatar_url">
+<ul className='space-list-items'>
+    <li *ngIf="info.name !== null">{{info.name}}</li>
+    <li *ngIf="info.location !== null">{{info.location}}</li>
+    <li *ngIf="info.company !== null">{{info.company}}</li>
+    <li>Followers: {{info.followers}}</li>
+    <li>Following: {{info.following}}</li>
+    <li>Public Repos: {{info.public_repos}}</li>
+    <li *ngIf="info.blog !== null"><a [href]="info.blog">{{info.blog}}</a></li> 
+</ul> 
+</player-preview>

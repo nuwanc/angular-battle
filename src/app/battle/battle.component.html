@@ -1,3 +1,13 @@
-<p>
-  battle works!
-</p>
+<div class='row'>
+  <player-input id="playerOne" label="Player One" (onSubmit)="onSubmit($event)" *ngIf="playerOneName === null"></player-input>
+  <player-preview [username]="playerOneName" [avatar]="playerOneImage" *ngIf="playerOneImage !== null">
+    <button class='reset' (click)="onReset('playerOne')">Reset</button>
+  </player-preview>
+  <player-input id="playerTwo" label="Player Two" (onSubmit)="onSubmit($event)" *ngIf="playerTwoName === null"></player-input>
+  <player-preview [username]="playerTwoName" [avatar]="playerTwoImage" *ngIf="playerTwoImage !== null">
+    <button class='reset' (click)="onReset('playerTwo')">Reset</button>
+  </player-preview>
+</div>
+<div class='row'>
+  <a routerLink="/battle/results" [queryParams]="{playerOneName:playerOneName,playerTwoName:playerTwoName}"  routerLinkActive="active" class="button" *ngIf="playerOneImage !== null && playerTwoImage !== null">Battle</a>
+</div>

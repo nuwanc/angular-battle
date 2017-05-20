@@ -14,12 +14,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RepoGridComponent } from './repo-grid/repo-grid.component';
 import { LoadingComponent } from './loading/loading.component';
 import { PlayerInputComponent } from './player-input/player-input.component';
+import { PlayerPreviewComponent } from './player-preview/player-preview.component';
+import { ResultsComponent } from './results/results.component';
+import { PlayerComponent } from './player/player.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   {path : 'home' , component : HomeComponent},
   {path : 'popular' , component : PopularComponent},
   {path : 'battle' , component : BattleComponent},
-  { path: '',   redirectTo: '/home', pathMatch: 'full' }
+  {path : 'battle/results' , component : ResultsComponent},
+  {path: '',   redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -32,7 +37,11 @@ const appRoutes: Routes = [
     NavbarComponent,
     RepoGridComponent,
     LoadingComponent,
-    PlayerInputComponent
+    PlayerInputComponent,
+    PlayerPreviewComponent,
+    ResultsComponent,
+    PlayerComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

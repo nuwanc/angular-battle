@@ -1,3 +1,10 @@
-<p>
-  player-input works!
-</p>
+<form class='column' (ngSubmit)="submit()" #playerForm="ngForm">
+  <label class='header' for='username'>
+      {{label}}
+  </label>
+  <input name='username' id='name' placeholder='github username' type='text' autoComplete='off' required
+  [(ngModel)]='username' #name="ngModel"/>
+  <button class='button' type='submit' [disabled]="!playerForm.form.valid">
+      Submit
+  </button>
+</form>

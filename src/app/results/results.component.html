@@ -1,0 +1,11 @@
+<div>
+  <loading *ngIf="loading"></loading>
+  <div *ngIf="error != null">
+    <p>{{error}}</p>
+    <a routerLink="/battle" class="reset">Reset</a>
+  </div>
+  <div class='row' *ngIf="!loading">
+        <player [label]="Winner" [score]="winner.score" [profile]="winner.profile"></player>
+        <player [label]="Looser" [score]="looser.score" [profile]="looser.profile"></player>
+  </div>
+</div>
